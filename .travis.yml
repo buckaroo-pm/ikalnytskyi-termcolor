@@ -1,4 +1,3 @@
-sudo: false
 language: cpp
 
 script:
@@ -74,6 +73,12 @@ jobs:
 
     - os: osx
       osx_image: xcode10
+
+    - os: windows
+      script:
+        - cmake -DTERMCOLOR_TESTS=ON .
+        - make
+        - ./test_termcolor
 
     - script:
         - mkdir -p /tmp/termcolor && cd "$_"

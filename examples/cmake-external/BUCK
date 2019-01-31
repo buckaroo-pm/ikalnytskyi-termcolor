@@ -1,0 +1,9 @@
+cxx_binary(
+  name = 'cmake-external',
+  srcs = [
+    'example.cpp',
+  ],
+  deps = [
+    '//:termcolor',
+  ],
+)
